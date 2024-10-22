@@ -18,7 +18,7 @@ import (
 )
 
 // Current version of the app
-const currentVersion = "0.3.0"
+const currentVersion = "v0.3.1"
 
 // GitHub API URL to fetch the latest release
 const releaseURL = "https://api.github.com/repos/Nexus-Te/NexusScanner/releases/latest"
