@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Modbus RTU Scanner</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="/static/styles.css">
+
+  <!-- Particles.js -->
+  <script src="/static/particles.min.js"></script>
+  <script src="/static/scripts.js" defer></script>
+</head>
+<body>
+  <div id="particles-js"></div>
+
+  <div class="container mt-5">
+    <h1 class="text-light text-center mb-4">Modbus RTU Scanner</h1>
+
+    <form id="configForm" class="row g-3">
+      <div class="col-md-6">
+        <label for="comPort" class="form-label text-light">COM Port</label>
+        <select id="comPort" class="form-select" required>
+          <option value="">Select a COM port</option>
+        </select>
+      </div>
+
+      <div class="col-md-6">
+        <label for="baudRate" class="form-label text-light">Baud Rate</label>
+        <input type="number" class="form-control" id="baudRate" value="9600" required />
+      </div>
+
+      <div class="col-md-6">
+        <label for="parity" class="form-label text-light">Parity</label>
+        <select id="parity" class="form-select" required>
+          <option value="N">None</option>
+          <option value="E">Even</option>
+          <option value="O">Odd</option>
+        </select>
+      </div>
+
+      <div class="col-md-6">
+        <label for="slaveId" class="form-label text-light">Slave ID</label>
+        <input type="number" class="form-control" id="slaveId" value="1" required />
+      </div>
+
+      <div class="col-md-6">
+        <label for="startRegister" class="form-label text-light">Start Register</label>
+        <input type="number" class="form-control" id="startRegister" value="0" required />
+      </div>
+
+      <div class="col-md-6">
+        <label for="numRegisters" class="form-label text-light">Number of Registers</label>
+        <input type="number" class="form-control" id="numRegisters" value="10" required />
+      </div>
+
+      <div class="col-12">
+        <button type="submit" class="btn btn-primary w-100">Start Scan</button>
+      </div>
+    </form>
+
+    <div class="mt-4" id="results"></div>
+  </div>
+</body>
+</html>

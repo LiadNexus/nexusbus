@@ -1,0 +1,7 @@
+Website = "https://nexus-te.com"
+
+[Details]
+  Name = "Nexus Scanner"
+  ID = "com.nexusscanner.app"
+  Version = "0.2.5"
+  Build = 14
