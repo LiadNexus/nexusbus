@@ -4,3 +4,4 @@
 # Ignore all SQLite3 database files
 *.sqlite3
 *.db
+*.rar
